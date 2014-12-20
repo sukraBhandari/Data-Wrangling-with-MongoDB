@@ -28,11 +28,11 @@ def key_type(element, keys):
         # YOUR CODE HERE
         k = element.attrib['k']
         print element.attrib
-        if lower.search(k) is not None:
+        if lower.match(k) is not None:
             keys['lower'] += 1       
-        elif lower_colon.search(k) is not None:
+        elif lower_colon.match(k) is not None:
             keys['lower_colon'] += 1
-        elif problemchars.search(k) is not None:
+        elif problemchars.match(k) is not None:
             keys['problemchars'] += 1
         else:
             keys['other'] += 1
